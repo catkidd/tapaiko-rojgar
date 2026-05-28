@@ -748,3 +748,12 @@
   box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
   background: var(--white);
 }
+
+@media (max-width: 992px) {
+  .policy-toc {
+    position: static !important;
+    max-height: 200px !important;
+    margin-bottom: 2rem;
+  }
+}
+
