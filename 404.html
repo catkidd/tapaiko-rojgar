@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found (404) — Tapaiko Rojgar</title>
+  <meta name="description" content="The page you are looking for does not exist. Return to Tapaiko Rojgar, Nepal's premier job portal." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002244'/><text y='22' x='5' font-size='18' fill='%23d4af37' font-family='Arial' font-weight='bold'>TR</text></svg>" />
+
+  <style>
+    .error-section {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 0 80px;
+      background: var(--bg-light);
+    }
+    .error-card {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      box-shadow: var(--card-shadow);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 800;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .error-icon {
+      font-size: 3.5rem;
+      color: var(--primary-blue);
+      margin-bottom: 1.5rem;
+      animation: float-lost 3s ease-in-out infinite;
+    }
+    @keyframes float-lost {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(5deg); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex flex-column" href="index.html">
+      <span class="navbar-logo-text"><i class="fas fa-briefcase me-2" style="font-size:0.95rem;color:var(--accent-gold-light);"></i>Tapaiko <span>Rojgar</span></span>
+      <span class="logo-tagline">तपाईंको रोजगार</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="jobs.html">Browse Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="btn-outline-gold" style="padding:0.5rem 1.1rem;font-size:0.78rem;">Sign In</a>
+        <a href="#" class="btn-gold" style="white-space:nowrap;"><i class="fas fa-plus-circle"></i> Post a Job</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- 404 SECTION -->
+<section class="error-section">
+  <div class="container d-flex justify-content-center">
+    <div class="error-card">
+      <div class="error-icon"><i class="fas fa-compass-drafting"></i></div>
+      <div class="error-code">404</div>
+      <h1 style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--primary-blue);margin-bottom:0.75rem;">Page Lost in Transition</h1>
+      <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--text-muted);line-height:1.7;margin-bottom:2rem;max-width:460px;margin-left:auto;margin-right:auto;">
+        We couldn't find the page you were looking for. It might have been moved, deleted, or perhaps the URL is typed incorrectly. Let's get you back on track!
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="index.html" class="btn-gold"><i class="fas fa-home me-1"></i> Go Back Home</a>
+        <a href="jobs.html" class="btn-outline-navy" style="padding:0.6rem 1.4rem;"><i class="fas fa-search me-1"></i> Browse Jobs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-briefcase me-2" style="color:var(--accent-gold-light);font-size:1rem;"></i>Tapaiko <span>Rojgar</span></div>
+          <div class="footer-tagline">तपाईंको रोजगार</div>
+          <p class="footer-description">Nepal's most trusted corporate job portal since 2024.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Browse Jobs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Durbar Marg, Kathmandu 44600</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@tapaikorojgar.com.np</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+977-1-4567890</span></div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="mb-0">&copy; 2026 Tapaiko Rojgar Pvt. Ltd. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmqrD0BgqZZ2J2PkI/WGdlMZnIgA" crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
