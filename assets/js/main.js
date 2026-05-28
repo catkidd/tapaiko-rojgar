@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothLinks();
   initChartBars();
   initCookieConsent();
+  initScrollProgressBar();
 });
 
 /* ============================================================
@@ -191,7 +192,7 @@ function showToast(message, type = 'success') {
   toast.id = 'tr-toast';
   toast.style.cssText = `
     position: fixed;
-    bottom: 5rem;
+    top: 85px;
     right: 2rem;
     background: ${type === 'success' ? 'var(--primary-blue)' : '#dc2626'};
     color: #fff;
@@ -214,7 +215,7 @@ function showToast(message, type = 'success') {
   if (!document.getElementById('toast-style')) {
     const style = document.createElement('style');
     style.id = 'toast-style';
-    style.textContent = `@keyframes slideToast { from { opacity:0; transform:translateY(20px) } to { opacity:1; transform:translateY(0) } }`;
+    style.textContent = `@keyframes slideToast { from { opacity:0; transform:translateY(-20px) } to { opacity:1; transform:translateY(0) } }`;
     document.head.appendChild(style);
   }
 
@@ -359,9 +360,34 @@ function initCookieConsent() {
     syncPolicyToggles(consent);
   }
 
-  // If no consent exists, show the banner
+  // If no consent exists, wait for scroll trigger to show the banner
   if (!consent) {
-    showCookieBanner();
+    const handleConsentScroll = () => {
+      const categoriesSection = document.getElementById('job-categories');
+      let shouldShow = false;
+      
+      if (categoriesSection) {
+        const rect = categoriesSection.getBoundingClientRect();
+        // Trigger if top of the Explore by Category section is visible in the viewport
+        if (rect.top <= window.innerHeight) {
+          shouldShow = true;
+        }
+      } else {
+        // For subpages without the category section, trigger after scrolling down a bit (150px)
+        if (window.scrollY > 150) {
+          shouldShow = true;
+        }
+      }
+      
+      if (shouldShow) {
+        showCookieBanner();
+        window.removeEventListener('scroll', handleConsentScroll);
+      }
+    };
+    
+    window.addEventListener('scroll', handleConsentScroll, { passive: true });
+    // Run once initially in case the user has already scrolled down on load
+    handleConsentScroll();
   }
 }
 
@@ -473,4 +499,32 @@ function syncPolicyToggles(consentStr) {
   } catch (e) {
     console.error('Error parsing cookie consent:', e);
   }
+}
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+function initScrollProgressBar() {
+  if (document.getElementById('scroll-progress-bar')) return;
+
+  const bar = document.createElement('div');
+  bar.id = 'scroll-progress-bar';
+  bar.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: var(--gold-gradient, linear-gradient(90deg, #D4AF37, #B8860B));
+    width: 0%;
+    z-index: 11000;
+    transition: width 0.08s ease-out;
+  `;
+  document.body.appendChild(bar);
+
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+    bar.style.width = scrolled + '%';
+  }, { passive: true });
 }
