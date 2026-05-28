@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>Tapaiko Rojgar — Nepal's Premier Job Portal & Recruitment Platform</title>
+  <meta name="description" content="Tapaiko Rojgar is Nepal's most trusted corporate job portal. Find top jobs across IT, finance, engineering, and healthcare. Post jobs and connect with verified candidates today." />
+  <meta name="keywords" content="jobs in Nepal, job portal Nepal, recruitment Nepal, tapaiko rojgar, career Nepal, IT jobs Nepal, find jobs Kathmandu" />
+  <meta name="author" content="Tapaiko Rojgar" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tapaikorojgar.com.np/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tapaiko Rojgar — Nepal's Premier Job Portal" />
+  <meta property="og:description" content="Connect with top employers and build your career with Nepal's most trusted recruitment platform." />
+  <meta property="og:url" content="https://tapaikorojgar.com.np/" />
+  <meta property="og:image" content="assets/images/hero-mockup.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tapaiko Rojgar — Nepal's Premier Job Portal" />
+  <meta name="twitter:description" content="Find verified jobs across Nepal. Trusted by 15,000+ employers." />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tapaiko Rojgar",
+    "url": "https://tapaikorojgar.com.np",
+    "description": "Nepal's premier job portal and recruitment platform",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://tapaikorojgar.com.np/jobs.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002244'/><text y='22' x='5' font-size='18' fill='%23d4af37' font-family='Arial' font-weight='bold'>TR</text></svg>" />
+</head>
+<body>
+
+<!-- ============================================================
+     STICKY NAVIGATION
+     ============================================================ -->
+<nav id="main-navbar" class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex flex-column" href="index.html" aria-label="Tapaiko Rojgar Home">
+      <span class="navbar-logo-text"><i class="fas fa-briefcase me-2" style="font-size:0.95rem;color:var(--accent-gold-light);"></i>Tapaiko <span>Rojgar</span></span>
+      <span class="logo-tagline">Your Employment · तपाईंको रोजगार</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html" id="nav-home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="jobs.html" id="nav-jobs">Browse Jobs</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="nav-employers" aria-expanded="false">Employers</a>
+          <ul class="dropdown-menu" style="background:var(--primary-blue);border:1px solid rgba(212,175,55,0.2);border-radius:8px;min-width:180px;padding:0.5rem 0;">
+            <li><a class="dropdown-item" href="#" style="color:rgba(255,255,255,0.75);font-size:0.85rem;padding:0.5rem 1.1rem;" onmouseover="this.style.color='var(--accent-gold-light)'" onmouseout="this.style.color='rgba(255,255,255,0.75)'"><i class="fas fa-plus-circle me-2 text-warning"></i>Post a Job</a></li>
+            <li><a class="dropdown-item" href="#" style="color:rgba(255,255,255,0.75);font-size:0.85rem;padding:0.5rem 1.1rem;" onmouseover="this.style.color='var(--accent-gold-light)'" onmouseout="this.style.color='rgba(255,255,255,0.75)'"><i class="fas fa-search me-2 text-warning"></i>Search Candidates</a></li>
+            <li><a class="dropdown-item" href="#" style="color:rgba(255,255,255,0.75);font-size:0.85rem;padding:0.5rem 1.1rem;" onmouseover="this.style.color='var(--accent-gold-light)'" onmouseout="this.style.color='rgba(255,255,255,0.75)'"><i class="fas fa-chart-bar me-2 text-warning"></i>Analytics</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" id="nav-contact">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="btn-outline-gold" style="padding:0.5rem 1.1rem;font-size:0.78rem;">Sign In</a>
+        <a href="#" class="btn-gold" id="post-job-btn" style="white-space:nowrap;">
+          <i class="fas fa-plus-circle"></i> Post a Job
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero" aria-label="Hero Section">
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center">
+      <!-- Left Column -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="hero-label">
+          <span class="dot"></span>
+          Nepal's #1 Verified Job Platform
+        </div>
+
+        <h1 class="hero-title">
+          Find Your <span class="accent-gold">Dream Career</span><br/>
+          — Verified, Trusted &amp; Fast
+        </h1>
+
+        <p class="hero-description">
+          Tapaiko Rojgar connects ambitious professionals with Nepal's top employers. Every listing is verified. Every opportunity is real. Your next career move starts here.
+        </p>
+
+        <!-- Search Box -->
+        <div class="hero-search-box">
+          <form id="hero-search-form" role="search" aria-label="Job search">
+            <div class="search-row">
+              <div class="form-group">
+                <label for="search-keyword">Job Title / Keywords</label>
+                <input type="text" class="form-control" id="search-keyword" name="q" placeholder="e.g. Software Engineer" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <label for="search-location">Location</label>
+                <select class="form-select" id="search-location" name="loc">
+                  <option value="">All Nepal</option>
+                  <option>Kathmandu</option>
+                  <option>Pokhara</option>
+                  <option>Lalitpur</option>
+                  <option>Bhaktapur</option>
+                  <option>Biratnagar</option>
+                  <option>Butwal</option>
+                  <option>Remote</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="search-category">Category</label>
+                <select class="form-select" id="search-category" name="cat">
+                  <option value="">All Categories</option>
+                  <option>Information Technology</option>
+                  <option>Finance &amp; Banking</option>
+                  <option>Healthcare</option>
+                  <option>Engineering</option>
+                  <option>Marketing</option>
+                  <option>Education</option>
+                </select>
+              </div>
+              <div class="form-group" style="flex:0 0 auto;">
+                <label style="visibility:hidden;">Search</label>
+                <button type="submit" class="btn-gold w-100" style="padding:0.62rem 1.4rem;">
+                  <i class="fas fa-search"></i> Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Quick filters -->
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.55);align-self:center;">Popular:</span>
+          <a href="jobs.html?cat=it" class="badge-type badge-fulltime" style="cursor:pointer;text-decoration:none;">IT &amp; Tech</a>
+          <a href="jobs.html?cat=finance" class="badge-type badge-parttime" style="cursor:pointer;text-decoration:none;">Finance</a>
+          <a href="jobs.html?type=remote" class="badge-type badge-remote" style="cursor:pointer;text-decoration:none;">Remote</a>
+          <a href="jobs.html?cat=healthcare" class="badge-type badge-internship" style="cursor:pointer;text-decoration:none;">Healthcare</a>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="hero-stats-row">
+          <div class="hero-stat">
+            <span class="stat-val" data-count="28400" data-suffix="+">0+</span>
+            <span class="stat-lbl">Active Jobs</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-val" data-count="15200" data-suffix="+">0+</span>
+            <span class="stat-lbl">Companies</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-val" data-count="420000" data-suffix="+">0+</span>
+            <span class="stat-lbl">Candidates</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column — Mockup Panel -->
+      <div class="col-lg-5 offset-lg-1">
+        <div class="hero-mockup-panel">
+          <!-- Floating Job Count Badge -->
+          <div class="hero-float-badge badge-jobs">
+            <i class="fas fa-briefcase" style="color:var(--accent-gold);"></i>
+            <span>28,400+ Active Jobs</span>
+          </div>
+          <!-- Floating Hired Badge -->
+          <div class="hero-float-badge badge-hired">
+            <i class="fas fa-check-circle"></i>
+            <span>Hired Today: 142</span>
+          </div>
+
+          <!-- Profile Card -->
+          <div class="hero-card">
+            <div class="profile-card-header">
+              <div class="profile-avatar">RS</div>
+              <div class="profile-info">
+                <div class="name">Rajesh Shrestha</div>
+                <div class="role">Senior Software Engineer</div>
+              </div>
+              <div class="verified-badge">
+                <i class="fas fa-shield-check"></i> Verified
+              </div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <div class="checklist-item">
+                <i class="fas fa-check-circle check"></i>
+                <span>Resume Uploaded &amp; Verified</span>
+              </div>
+              <div class="checklist-item">
+                <i class="fas fa-check-circle check"></i>
+                <span>12 Applications Sent</span>
+              </div>
+              <div class="checklist-item">
+                <i class="fas fa-check-circle check"></i>
+                <span>3 Interview Invitations</span>
+              </div>
+              <div class="checklist-item">
+                <i class="fas fa-circle" style="color:var(--accent-gold);font-size:0.6rem;"></i>
+                <span style="color:var(--text-muted);">Offer Letter Pending…</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart Card -->
+          <div class="hero-card">
+            <div class="chart-card-label">
+              <i class="fas fa-chart-bar me-2" style="color:var(--accent-gold);"></i>
+              Career Progress Tracker
+            </div>
+            <div class="mini-chart">
+              <div class="chart-bar-wrap">
+                <div class="chart-bar navy" data-height="30px" style="height:0;"></div>
+                <div class="chart-label">Jan</div>
+              </div>
+              <div class="chart-bar-wrap">
+                <div class="chart-bar navy" data-height="42px" style="height:0;"></div>
+                <div class="chart-label">Feb</div>
+              </div>
+              <div class="chart-bar-wrap">
+                <div class="chart-bar navy" data-height="28px" style="height:0;"></div>
+                <div class="chart-label">Mar</div>
+              </div>
+              <div class="chart-bar-wrap">
+                <div class="chart-bar gold" data-height="50px" style="height:0;"></div>
+                <div class="chart-label">Apr</div>
+              </div>
+              <div class="chart-bar-wrap">
+                <div class="chart-bar gold" data-height="58px" style="height:0;"></div>
+                <div class="chart-label">May</div>
+              </div>
+            </div>
+            <div class="chart-growth">
+              <i class="fas fa-arrow-trend-up"></i>
+              <span>+34% profile views this month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS STRIP
+     ============================================================ -->
+<section id="stats-strip" aria-label="Platform Statistics">
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-count" data-count="28400" data-suffix="+">0+</span>
+          <span class="stat-label">Live Job Listings</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-count" data-count="15200" data-suffix="+">0+</span>
+          <span class="stat-label">Verified Companies</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-count" data-count="420000" data-suffix="+">0+</span>
+          <span class="stat-label">Registered Candidates</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-count" data-count="98" data-suffix="%">0%</span>
+          <span class="stat-label">Placement Success Rate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURED JOBS
+     ============================================================ -->
+<section id="featured-jobs" aria-label="Featured Job Listings">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <div class="divider-gold"></div>
+        <h2 class="section-title">Featured Job Opportunities</h2>
+        <p class="section-subtitle mb-0">Hand-picked, high-quality listings from verified top employers.</p>
+      </div>
+      <a href="jobs.html" class="btn-outline-navy d-none d-md-flex">
+        View All Jobs <i class="fas fa-arrow-right ms-1"></i>
+      </a>
+    </div>
+    <div class="mb-4"></div>
+
+    <div class="row g-4">
+      <!-- Job Card 1 -->
+      <div class="col-md-6 col-xl-4 hidden-anim" data-delay="0">
+        <div class="job-card" onclick="window.location='jobs.html'" role="article" aria-label="Senior Backend Engineer at CloudNepal">
+          <span class="featured-tag">Featured</span>
+          <div class="job-card-header">
+            <div class="company-logo" style="background:linear-gradient(135deg,#002244,#003d8a);color:white;">CN</div>
+            <button class="job-card-bookmark" data-job-id="job-001" aria-label="Save this job">
+              <i class="far fa-bookmark"></i>
+            </button>
+          </div>
+          <div class="job-title">Senior Backend Engineer</div>
+          <div class="company-name"><i class="fas fa-building me-1"></i>CloudNepal Technologies</div>
+          <div class="job-meta">
+            <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Kathmandu</span>
+            <span class="job-meta-item"><i class="fas fa-clock"></i> Full Time</span>
+            <span class="job-meta-item"><i class="fas fa-layer-group"></i> IT &amp; Tech</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-type badge-fulltime">Full Time</span>
+            <span class="badge-type badge-remote">Remote OK</span>
+          </div>
+          <div class="job-card-divider"></div>
+          <div class="job-card-footer">
+            <div>
+              <div class="job-salary">NPR 1.5L–2.2L <small>/month</small></div>
+              <div class="posted-time"><i class="fas fa-circle-dot me-1" style="color:#10b981;font-size:0.55rem;"></i>Posted 2 days ago</div>
+            </div>
+            <a href="jobs.html" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 2 -->
+      <div class="col-md-6 col-xl-4 hidden-anim" data-delay="80">
+        <div class="job-card" onclick="window.location='jobs.html'" role="article" aria-label="Product Designer at DesignBridge Nepal">
+          <div class="job-card-header">
+            <div class="company-logo" style="background:linear-gradient(135deg,#7c3aed,#a855f7);color:white;">DB</div>
+            <button class="job-card-bookmark" data-job-id="job-002" aria-label="Save this job">
+              <i class="far fa-bookmark"></i>
+            </button>
+          </div>
+          <div class="job-title">Senior Product Designer (UI/UX)</div>
+          <div class="company-name"><i class="fas fa-building me-1"></i>DesignBridge Nepal</div>
+          <div class="job-meta">
+            <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Lalitpur</span>
+            <span class="job-meta-item"><i class="fas fa-clock"></i> Full Time</span>
+            <span class="job-meta-item"><i class="fas fa-layer-group"></i> Design</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-type badge-fulltime">Full Time</span>
+          </div>
+          <div class="job-card-divider"></div>
+          <div class="job-card-footer">
+            <div>
+              <div class="job-salary">NPR 80K–1.2L <small>/month</small></div>
+              <div class="posted-time"><i class="fas fa-circle-dot me-1" style="color:#10b981;font-size:0.55rem;"></i>Posted 1 day ago</div>
+            </div>
+            <a href="jobs.html" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 3 -->
+      <div class="col-md-6 col-xl-4 hidden-anim" data-delay="160">
+        <div class="job-card" onclick="window.location='jobs.html'" role="article" aria-label="Financial Analyst at Himalayan Bank">
+          <span class="featured-tag">Featured</span>
+          <div class="job-card-header">
+            <div class="company-logo" style="background:linear-gradient(135deg,#b8860b,#d4af37);color:white;">HB</div>
+            <button class="job-card-bookmark" data-job-id="job-003" aria-label="Save this job">
+              <i class="far fa-bookmark"></i>
+            </button>
+          </div>
+          <div class="job-title">Financial Analyst — Investment Division</div>
+          <div class="company-name"><i class="fas fa-building me-1"></i>Himalayan Bank Ltd.</div>
+          <div class="job-meta">
+            <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Kathmandu</span>
+            <span class="job-meta-item"><i class="fas fa-clock"></i> Full Time</span>
+            <span class="job-meta-item"><i class="fas fa-layer-group"></i> Finance</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-type badge-fulltime">Full Time</span>
+          </div>
+          <div class="job-card-divider"></div>
+          <div class="job-card-footer">
+            <div>
+              <div class="job-salary">NPR 1.2L–1.8L <small>/month</small></div>
+              <div class="posted-time"><i class="fas fa-circle-dot me-1" style="color:#10b981;font-size:0.55rem;"></i>Posted 3 days ago</div>
+            </div>
+            <a href="jobs.html" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 4 -->
+      <div class="col-md-6 col-xl-4 hidden-anim" data-delay="0">
+        <div class="job-card" onclick="window.location='jobs.html'" role="article" aria-label="Civil Engineer at BuildNepal">
+          <div class="job-card-header">
+            <div class="company-logo" style="background:linear-gradient(135deg,#0f766e,#0d9488);color:white;">BN</div>
+            <button class="job-card-bookmark" data-job-id="job-004" aria-label="Save this job">
+              <i class="far fa-bookmark"></i>
+            </button>
+          </div>
+          <div class="job-title">Senior Civil Engineer</div>
+          <div class="company-name"><i class="fas fa-building me-1"></i>BuildNepal Infrastructure</div>
+          <div class="job-meta">
+            <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Pokhara</span>
+            <span class="job-meta-item"><i class="fas fa-clock"></i> Full Time</span>
+            <span class="job-meta-item"><i class="fas fa-layer-group"></i> Engineering</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-type badge-fulltime">Full Time</span>
+            <span class="badge-type badge-contract">Contract</span>
+          </div>
+          <div class="job-card-divider"></div>
+          <div class="job-card-footer">
+            <div>
+              <div class="job-salary">NPR 1.0L–1.5L <small>/month</small></div>
+              <div class="posted-time"><i class="fas fa-circle-dot me-1" style="color:#10b981;font-size:0.55rem;"></i>Posted 5 days ago</div>
+            </div>
+            <a href="jobs.html" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 5 -->
+      <div class="col-md-6 col-xl-4 hidden-anim" data-delay="80">
+        <div class="job-card" onclick="window.location='jobs.html'" role="article" aria-label="Digital Marketing Manager at MediaNova">
+          <div class="job-card-header">
+            <div class="company-logo" style="background:linear-gradient(135deg,#dc2626,#ef4444);color:white;">MN</div>
+            <button class="job-card-bookmark" data-job-id="job-005" aria-label="Save this job">
+              <i class="far fa-bookmark"></i>
+            </button>
+          </div>
+          <div class="job-title">Digital Marketing Manager</div>
+          <div class="company-name"><i class="fas fa-building me-1"></i>MediaNova Nepal</div>
+          <div class="job-meta">
+            <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Kathmandu</span>
+            <span class="job-meta-item"><i class="fas fa-clock"></i> Full Time</span>
+            <span class="job-meta-item"><i class="fas fa-layer-group"></i> Marketing</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-type badge-fulltime">Full Time</span>
+            <span class="badge-type badge-remote">Hybrid</span>
+          </div>
+          <div class="job-card-divider"></div>
+          <div class="job-card-footer">
+            <div>
+              <div class="job-salary">NPR 70K–1.1L <small>/month</small></div>
+              <div class="posted-time"><i class="fas fa-circle-dot me-1" style="color:#10b981;font-size:0.55rem;"></i>Posted Today</div>
+            </div>
+            <a href="jobs.html" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 6 -->
+      <div class="col-md-6 col-xl-4 hidden-anim" data-delay="160">
+        <div class="job-card" onclick="window.location='jobs.html'" role="article" aria-label="Staff Nurse at Norvic Hospital">
+          <span class="featured-tag">Featured</span>
+          <div class="job-card-header">
+            <div class="company-logo" style="background:linear-gradient(135deg,#0369a1,#0284c7);color:white;">NH</div>
+            <button class="job-card-bookmark" data-job-id="job-006" aria-label="Save this job">
+              <i class="far fa-bookmark"></i>
+            </button>
+          </div>
+          <div class="job-title">Staff Nurse — ICU &amp; Emergency</div>
+          <div class="company-name"><i class="fas fa-building me-1"></i>Norvic International Hospital</div>
+          <div class="job-meta">
+            <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Kathmandu</span>
+            <span class="job-meta-item"><i class="fas fa-clock"></i> Full Time</span>
+            <span class="job-meta-item"><i class="fas fa-layer-group"></i> Healthcare</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-type badge-fulltime">Full Time</span>
+          </div>
+          <div class="job-card-divider"></div>
+          <div class="job-card-footer">
+            <div>
+              <div class="job-salary">NPR 55K–80K <small>/month</small></div>
+              <div class="posted-time"><i class="fas fa-circle-dot me-1" style="color:#10b981;font-size:0.55rem;"></i>Posted 4 days ago</div>
+            </div>
+            <a href="jobs.html" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /row -->
+
+    <div class="text-center mt-5 d-md-none">
+      <a href="jobs.html" class="btn-navy"><i class="fas fa-briefcase me-2"></i>View All 28,400+ Jobs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     JOB CATEGORIES
+     ============================================================ -->
+<section id="job-categories" aria-label="Job Categories">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="divider-gold center"></div>
+      <h2 class="section-title">Explore By Category</h2>
+      <p class="section-subtitle">Discover opportunities across all major industries in Nepal.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="0">
+        <a href="jobs.html?cat=it" class="category-card" aria-label="Information Technology jobs">
+          <div class="category-icon"><i class="fas fa-microchip"></i></div>
+          <div class="category-name">Information Technology</div>
+          <div class="category-count">4,280 Jobs</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="60">
+        <a href="jobs.html?cat=finance" class="category-card" aria-label="Finance and Banking jobs">
+          <div class="category-icon"><i class="fas fa-coins"></i></div>
+          <div class="category-name">Finance &amp; Banking</div>
+          <div class="category-count">3,150 Jobs</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="120">
+        <a href="jobs.html?cat=healthcare" class="category-card" aria-label="Healthcare jobs">
+          <div class="category-icon"><i class="fas fa-heartbeat"></i></div>
+          <div class="category-name">Healthcare</div>
+          <div class="category-count">2,840 Jobs</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="180">
+        <a href="jobs.html?cat=engineering" class="category-card" aria-label="Engineering jobs">
+          <div class="category-icon"><i class="fas fa-drafting-compass"></i></div>
+          <div class="category-name">Engineering</div>
+          <div class="category-count">2,100 Jobs</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="0">
+        <a href="jobs.html?cat=marketing" class="category-card" aria-label="Marketing jobs">
+          <div class="category-icon"><i class="fas fa-bullhorn"></i></div>
+          <div class="category-name">Marketing &amp; Sales</div>
+          <div class="category-count">1,920 Jobs</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="60">
+        <a href="jobs.html?cat=education" class="category-card" aria-label="Education jobs">
+          <div class="category-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="category-name">Education</div>
+          <div class="category-count">1,680 Jobs</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="120">
+        <a href="jobs.html?cat=hospitality" class="category-card" aria-label="Hospitality jobs">
+          <div class="category-icon"><i class="fas fa-hotel"></i></div>
+          <div class="category-name">Hospitality &amp; Tourism</div>
+          <div class="category-count">1,450 Jobs</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 hidden-anim" data-delay="180">
+        <a href="jobs.html?cat=construction" class="category-card" aria-label="Construction jobs">
+          <div class="category-icon"><i class="fas fa-hard-hat"></i></div>
+          <div class="category-name">Construction</div>
+          <div class="category-count">1,200 Jobs</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
+<section id="how-it-works" aria-label="How Tapaiko Rojgar Works">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="divider-gold center"></div>
+      <h2 class="section-title">How Tapaiko Rojgar Works</h2>
+      <p class="section-subtitle">Three simple steps from profile to placement.</p>
+    </div>
+    <div class="row g-4 steps-container position-relative">
+      <div class="step-connector d-none d-lg-block" aria-hidden="true"></div>
+      <div class="col-lg-4 hidden-anim" data-delay="0">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-title">Create Your Verified Profile</div>
+          <div class="step-desc">Build a comprehensive professional profile. Upload your CV, skills, and certifications. Our system verifies your credentials for employer confidence.</div>
+        </div>
+      </div>
+      <div class="col-lg-4 hidden-anim" data-delay="120">
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-title">Discover &amp; Apply Smart</div>
+          <div class="step-desc">Browse 28,400+ verified listings. Use intelligent filters to find the perfect match. Apply with one click using your saved profile.</div>
+        </div>
+      </div>
+      <div class="col-lg-4 hidden-anim" data-delay="240">
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-title">Land Your Dream Role</div>
+          <div class="step-desc">Track applications in real time. Receive interview invitations directly. Negotiate with confidence using our salary insights dashboard.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials" aria-label="Candidate and Employer Testimonials">
+  <div class="container position-relative" style="z-index:1;">
+    <div class="text-center mb-5">
+      <div class="divider-gold center"></div>
+      <h2 class="section-title" style="color:var(--white);">What Our Community Says</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.55);">Trusted by thousands of candidates and top employers across Nepal.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 hidden-anim" data-delay="0">
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">SP</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"I landed my dream job at CloudNepal within 3 weeks of signing up. The platform is incredibly professional and the job listings are all genuine. Highly recommend!"</div>
+          <div class="testimonial-name">Sanjay Poudel</div>
+          <div class="testimonial-role">Software Engineer · Kathmandu</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 hidden-anim" data-delay="100">
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">RA</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"As an HR manager, finding verified candidates was always challenging. Tapaiko Rojgar delivers pre-screened applicants that actually match our requirements."</div>
+          <div class="testimonial-name">Rita Acharya</div>
+          <div class="testimonial-role">HR Director · Himalayan Bank</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 hidden-anim" data-delay="200">
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">KM</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"The career tracking dashboard is exceptional. Being able to see my application progress in real time gave me the confidence to negotiate a 40% salary increase!"</div>
+          <div class="testimonial-name">Kiran Maharjan</div>
+          <div class="testimonial-role">Financial Analyst · Lalitpur</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EMPLOYER CTA BANNER
+     ============================================================ -->
+<section id="employer-cta" aria-label="Post a Job Call to Action">
+  <div class="container">
+    <div class="cta-card">
+      <div class="row align-items-center position-relative" style="z-index:1;">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <div class="hero-label mb-3" style="background:rgba(212,175,55,0.12);border-color:rgba(212,175,55,0.3);">
+            <span class="dot"></span> For Employers
+          </div>
+          <h2 class="cta-title">Hire Nepal's <span class="accent-gold">Best Talent</span> — Starting Today</h2>
+          <p class="cta-desc">Post your first job listing free. Access 420,000+ pre-verified candidates. Our AI-powered matching ensures you find the right fit faster than ever.</p>
+          <div class="cta-features">
+            <div class="cta-feature"><i class="fas fa-check-circle"></i> Free job posting</div>
+            <div class="cta-feature"><i class="fas fa-check-circle"></i> AI candidate matching</div>
+            <div class="cta-feature"><i class="fas fa-check-circle"></i> Verified applicants only</div>
+            <div class="cta-feature"><i class="fas fa-check-circle"></i> Dedicated HR dashboard</div>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#" class="btn-gold" id="post-first-job-btn">
+              <i class="fas fa-rocket"></i> Post Your First Job Free
+            </a>
+            <a href="#" class="btn-outline-gold" style="color:rgba(255,255,255,0.75)!important;border-color:rgba(255,255,255,0.3);">
+              <i class="fas fa-play-circle"></i> Watch Demo
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="assets/images/hero-mockup.png" alt="Corporate recruitment dashboard mockup showing candidate profiles and analytics" class="img-fluid rounded-3" style="max-height:280px;object-fit:contain;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="site-footer" aria-label="Site Footer">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-briefcase me-2" style="color:var(--accent-gold-light);font-size:1rem;"></i>Tapaiko <span>Rojgar</span></div>
+          <div class="footer-tagline">तपाईंको रोजगार · Your Employment</div>
+          <p class="footer-description">Nepal's most trusted corporate job portal, connecting ambitious professionals with verified top employers since 2024.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Browse Jobs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blog &amp; News</a></li>
+          <li><a href="#">Salary Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- For Employers -->
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="footer-heading">For Employers</div>
+        <ul class="footer-links">
+          <li><a href="#">Post a Job</a></li>
+          <li><a href="#">Search Candidates</a></li>
+          <li><a href="#">Pricing Plans</a></li>
+          <li><a href="#">HR Dashboard</a></li>
+          <li><a href="#">Bulk Hiring</a></li>
+          <li><a href="#">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-heading">Contact Us</div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Durbar Marg, Kathmandu 44600, Nepal</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+977-1-4567890<br/>+977-9801234567</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@tapaikorojgar.com.np<br/>support@tapaikorojgar.com.np</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Sun–Fri: 9:00 AM – 6:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="mb-0">&copy; 2026 Tapaiko Rojgar Pvt. Ltd. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top" title="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Bootstrap 5.3 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmqrD0BgqZZ2J2PkI/WGdlMZnIgA" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

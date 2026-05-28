@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Tapaiko Rojgar | Nepal's Premier Job Portal</title>
+  <meta name="description" content="Get in touch with Tapaiko Rojgar. Contact our team for job posting support, candidate queries, partnership inquiries, or technical assistance." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tapaikorojgar.com.np/contact.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002244'/><text y='22' x='5' font-size='18' fill='%23d4af37' font-family='Arial' font-weight='bold'>TR</text></svg>" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex flex-column" href="index.html">
+      <span class="navbar-logo-text"><i class="fas fa-briefcase me-2" style="font-size:0.95rem;color:var(--accent-gold-light);"></i>Tapaiko <span>Rojgar</span></span>
+      <span class="logo-tagline">Your Employment · तपाईंको रोजगार</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="jobs.html">Browse Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="btn-outline-gold" style="padding:0.5rem 1.1rem;font-size:0.78rem;">Sign In</a>
+        <a href="#" class="btn-gold" style="white-space:nowrap;"><i class="fas fa-plus-circle"></i> Post a Job</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTACT HERO -->
+<section id="contact-hero">
+  <div class="container text-center">
+    <div class="divider-gold center mb-3"></div>
+    <h1 class="hero-title">Get In <span class="accent-gold">Touch</span></h1>
+    <p class="hero-description mx-auto" style="max-width:520px;">Our dedicated team is here to help — whether you're a job seeker, an employer, or a partner looking to collaborate.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM + INFO -->
+<section class="section-pad" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <div class="divider-gold mb-3"></div>
+          <h2 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--primary-blue);margin-bottom:0.5rem;">Send Us a Message</h2>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:2rem;">We typically respond within 24 business hours.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label-brand" for="contact-name">Full Name *</label>
+                <input type="text" class="form-control-brand" id="contact-name" name="name" placeholder="Rajesh Shrestha" required />
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-brand" for="contact-email">Email Address *</label>
+                <input type="email" class="form-control-brand" id="contact-email" name="email" placeholder="rajesh@example.com" required />
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-brand" for="contact-phone">Phone Number</label>
+                <input type="tel" class="form-control-brand" id="contact-phone" name="phone" placeholder="+977-98XXXXXXXX" />
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-brand" for="contact-type">I Am A *</label>
+                <select class="form-control-brand" id="contact-type" name="type" required>
+                  <option value="">Select role…</option>
+                  <option>Job Seeker</option>
+                  <option>Employer / Recruiter</option>
+                  <option>Partnership Inquiry</option>
+                  <option>Media / Press</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label-brand" for="contact-subject">Subject *</label>
+                <input type="text" class="form-control-brand" id="contact-subject" name="subject" placeholder="How can we help you?" required />
+              </div>
+              <div class="col-12">
+                <label class="form-label-brand" for="contact-message">Message *</label>
+                <textarea class="form-control-brand" id="contact-message" name="message" rows="5" placeholder="Please describe your query in detail…" required style="resize:vertical;"></textarea>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <input type="checkbox" id="contact-consent" required style="accent-color:var(--accent-gold);" />
+                  <label for="contact-consent" style="font-size:0.8rem;color:var(--text-muted);">I agree to the <a href="#" style="color:var(--accent-gold);">Privacy Policy</a> and consent to being contacted.</label>
+                </div>
+                <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:0.8rem;">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="contact-info-card">
+          <div class="divider-gold mb-3" style="background:var(--gold-gradient);"></div>
+          <h2 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:1.5rem;">Our Office</h2>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="d-flex align-items-start gap-3">
+              <div style="width:40px;height:40px;border-radius:8px;background:rgba(212,175,55,0.15);border:1px solid rgba(212,175,55,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-map-marker-alt" style="color:var(--accent-gold-light);"></i>
+              </div>
+              <div>
+                <div style="font-family:var(--font-heading);font-size:0.82rem;font-weight:700;color:var(--white);margin-bottom:0.2rem;">Headquarters</div>
+                <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.6;">4th Floor, Trade Tower<br/>Durbar Marg, Kathmandu 44600<br/>Nepal</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div style="width:40px;height:40px;border-radius:8px;background:rgba(212,175,55,0.15);border:1px solid rgba(212,175,55,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-phone" style="color:var(--accent-gold-light);"></i>
+              </div>
+              <div>
+                <div style="font-family:var(--font-heading);font-size:0.82rem;font-weight:700;color:var(--white);margin-bottom:0.2rem;">Phone</div>
+                <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.8;">
+                  +977-1-4567890<br/>
+                  +977-9801234567 (WhatsApp)
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div style="width:40px;height:40px;border-radius:8px;background:rgba(212,175,55,0.15);border:1px solid rgba(212,175,55,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-envelope" style="color:var(--accent-gold-light);"></i>
+              </div>
+              <div>
+                <div style="font-family:var(--font-heading);font-size:0.82rem;font-weight:700;color:var(--white);margin-bottom:0.2rem;">Email</div>
+                <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.8;">
+                  info@tapaikorojgar.com.np<br/>
+                  support@tapaikorojgar.com.np
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div style="width:40px;height:40px;border-radius:8px;background:rgba(212,175,55,0.15);border:1px solid rgba(212,175,55,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-clock" style="color:var(--accent-gold-light);"></i>
+              </div>
+              <div>
+                <div style="font-family:var(--font-heading);font-size:0.82rem;font-weight:700;color:var(--white);margin-bottom:0.2rem;">Office Hours</div>
+                <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.8;">
+                  Sunday – Friday: 9:00 AM – 6:00 PM<br/>
+                  Saturday: Closed
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(212,175,55,0.2);">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.9916565741505!2d85.31489!3d27.70698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fcb77fd4bd%3A0x58099b1b8f7bfa72!2sDurbar%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+              width="100%"
+              height="200"
+              style="border:0;filter:grayscale(30%) contrast(1.1);"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Tapaiko Rojgar office location on Google Maps">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="mt-3 p-3" style="background:var(--white);border:1px solid var(--border-color);border-radius:var(--card-radius);">
+          <div style="font-family:var(--font-heading);font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--primary-blue);margin-bottom:0.85rem;">Connect With Us</div>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="#" class="btn-outline-navy" style="padding:0.4rem 0.9rem;font-size:0.75rem;border-radius:6px;"><i class="fab fa-facebook me-1"></i>Facebook</a>
+            <a href="#" class="btn-outline-navy" style="padding:0.4rem 0.9rem;font-size:0.75rem;border-radius:6px;"><i class="fab fa-linkedin me-1"></i>LinkedIn</a>
+            <a href="#" class="btn-outline-navy" style="padding:0.4rem 0.9rem;font-size:0.75rem;border-radius:6px;"><i class="fab fa-instagram me-1"></i>Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="divider-gold center"></div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Quick answers to common queries.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item" style="border:1.5px solid var(--border-color);border-radius:var(--card-radius)!important;margin-bottom:0.75rem;overflow:hidden;">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="font-family:var(--font-heading);font-weight:600;font-size:0.9rem;color:var(--primary-blue);background:var(--bg-light);">
+                Is it free to create a candidate profile on Tapaiko Rojgar?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;">
+                Yes, absolutely! Creating a candidate profile, uploading your CV, and applying to jobs is 100% free for all job seekers. We believe in democratizing career opportunities.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" style="border:1.5px solid var(--border-color);border-radius:var(--card-radius)!important;margin-bottom:0.75rem;overflow:hidden;">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="font-family:var(--font-heading);font-weight:600;font-size:0.9rem;color:var(--primary-blue);background:var(--bg-light);">
+                How are job listings verified on the platform?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;">
+                Every employer undergoes a 3-step verification: (1) Company registration document verification, (2) PAN/VAT number validation, (3) Physical address confirmation. All jobs are reviewed by our team before publication.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" style="border:1.5px solid var(--border-color);border-radius:var(--card-radius)!important;margin-bottom:0.75rem;overflow:hidden;">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="font-family:var(--font-heading);font-weight:600;font-size:0.9rem;color:var(--primary-blue);background:var(--bg-light);">
+                How much does it cost to post a job as an employer?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;">
+                Your first job posting is completely free. After that, we offer flexible pricing plans starting from NPR 999/month for startup packages, up to enterprise solutions. Contact us for custom pricing.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" style="border:1.5px solid var(--border-color);border-radius:var(--card-radius)!important;overflow:hidden;">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="font-family:var(--font-heading);font-weight:600;font-size:0.9rem;color:var(--primary-blue);background:var(--bg-light);">
+                How quickly can I expect a response to my inquiry?
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;">
+                Our support team responds to all inquiries within 24 business hours. For urgent matters, you can reach us directly at +977-9801234567 via WhatsApp during office hours.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-briefcase me-2" style="color:var(--accent-gold-light);font-size:1rem;"></i>Tapaiko <span>Rojgar</span></div>
+          <div class="footer-tagline">तपाईंको रोजगार · Your Employment</div>
+          <p class="footer-description">Nepal's most trusted corporate job portal since 2024.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Browse Jobs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="footer-heading">For Employers</div>
+        <ul class="footer-links">
+          <li><a href="#">Post a Job</a></li>
+          <li><a href="#">Search Candidates</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Durbar Marg, Kathmandu 44600</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@tapaikorojgar.com.np</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+977-1-4567890</span></div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p class="mb-0">&copy; 2026 Tapaiko Rojgar Pvt. Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmqrD0BgqZZ2J2PkI/WGdlMZnIgA" crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
