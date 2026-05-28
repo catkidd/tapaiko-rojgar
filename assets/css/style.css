@@ -613,9 +613,17 @@ ul { list-style: none; }
 .job-card:hover::before { transform: scaleX(1); }
 .job-card-header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  gap: 0.75rem;
   margin-bottom: 1rem;
+}
+.job-card-header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 .company-logo {
   width: 50px; height: 50px;
@@ -641,6 +649,8 @@ ul { list-style: none; }
   border: none;
   padding: 0;
   line-height: 1;
+  position: relative;
+  z-index: 1;
 }
 .job-card-bookmark:hover { color: var(--accent-gold); transform: scale(1.2); }
 .job-card-bookmark.saved { color: var(--accent-gold); }
@@ -717,18 +727,17 @@ ul { list-style: none; }
   transform: translateY(-1px);
 }
 .featured-tag {
-  position: absolute;
-  top: 14px;
-  right: 14px;
+  display: inline-block;
   background: rgba(212,175,55,0.12);
   border: 1px solid rgba(184,134,11,0.25);
   color: var(--accent-gold);
-  font-size: 0.64rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
+  white-space: nowrap;
 }
 .posted-time {
   font-size: 0.72rem;

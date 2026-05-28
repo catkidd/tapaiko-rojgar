@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initJobFilters();
   initSmoothLinks();
   initChartBars();
+  initCookieConsent();
 });
 
 /* ============================================================
@@ -344,4 +345,132 @@ if (contactForm) {
       btn.disabled = false;
     }, 1800);
   });
+}
+
+/* ============================================================
+   COOKIE CONSENT MANAGER
+   ============================================================ */
+function initCookieConsent() {
+  const consent = localStorage.getItem('tr_cookie_consent');
+  
+  // Sync the policy toggles if on cookie-policy.html
+  const isPolicyPage = window.location.pathname.includes('cookie-policy.html');
+  if (isPolicyPage) {
+    syncPolicyToggles(consent);
+  }
+
+  // If no consent exists, show the banner
+  if (!consent) {
+    showCookieBanner();
+  }
+}
+
+function showCookieBanner() {
+  if (document.getElementById('tr-cookie-banner')) return;
+
+  const banner = document.createElement('div');
+  banner.id = 'tr-cookie-banner';
+  banner.style.cssText = `
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    max-width: 480px;
+    background: #00152b;
+    color: #fff;
+    border: 1.5px solid rgba(212, 175, 55, 0.35);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 12px 36px rgba(0, 34, 68, 0.35);
+    z-index: 10000;
+    font-family: var(--font-body), sans-serif;
+    animation: slideUpCookie 0.4s ease forwards;
+  `;
+  
+  if (!document.getElementById('cookie-banner-style')) {
+    const style = document.createElement('style');
+    style.id = 'cookie-banner-style';
+    style.textContent = `
+      @keyframes slideUpCookie {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @media (max-width: 576px) {
+        #tr-cookie-banner {
+          left: 1rem !important;
+          right: 1rem !important;
+          bottom: 1rem !important;
+          max-width: calc(100% - 2rem) !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  banner.innerHTML = `
+    <div class="d-flex align-items-start gap-3">
+      <div style="width: 42px; height: 42px; border-radius: 8px; background: rgba(212, 175, 55, 0.15); border: 1px solid rgba(212, 175, 55, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-gold-light); font-size: 1.25rem; flex-shrink: 0; margin-top: 2px;">
+        <i class="fas fa-cookie-bite"></i>
+      </div>
+      <div style="flex: 1;">
+        <strong style="font-family: var(--font-heading); font-size: 0.95rem; display: block; margin-bottom: 0.35rem; color: #fff;">Cookie Consent</strong>
+        <p style="font-size: 0.78rem; color: rgba(255, 255, 255, 0.75); line-height: 1.6; margin-bottom: 1.2rem; margin-top: 0;">
+          We use cookies to enhance your job search, analyze site traffic, and deliver personalized job matches. Learn more in our <a href="cookie-policy.html" style="color: var(--accent-gold-light); text-decoration: underline; font-weight: 600;">Cookie Policy</a>.
+        </p>
+        <div class="d-flex gap-2 flex-wrap" style="font-size: 0.75rem;">
+          <button id="cookie-accept-all" class="btn-gold" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 700; border: none; cursor: pointer; white-space: nowrap;">Accept All</button>
+          <button id="cookie-reject-all" class="btn-outline-gold" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 700; cursor: pointer; white-space: nowrap; color: #fff !important; border-color: rgba(255,255,255,0.25); background: transparent;">Reject All</button>
+          <a href="cookie-policy.html" class="btn-outline-gold" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; text-decoration: none; text-align: center; white-space: nowrap; color: #fff !important; border-color: rgba(255,255,255,0.25);">Manage</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+
+  document.getElementById('cookie-accept-all').addEventListener('click', () => {
+    saveConsent({ essential: true, analytics: true, preference: true, marketing: true });
+  });
+
+  document.getElementById('cookie-reject-all').addEventListener('click', () => {
+    saveConsent({ essential: true, analytics: false, preference: false, marketing: false });
+  });
+}
+
+function saveConsent(consentObj) {
+  localStorage.setItem('tr_cookie_consent', JSON.stringify(consentObj));
+  const banner = document.getElementById('tr-cookie-banner');
+  if (banner) {
+    banner.style.transition = 'opacity 0.3s, transform 0.3s';
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateY(20px)';
+    setTimeout(() => banner.remove(), 300);
+  }
+  showToast('Cookie preferences updated!');
+  
+  if (window.location.pathname.includes('cookie-policy.html')) {
+    syncPolicyToggles(JSON.stringify(consentObj));
+  }
+}
+
+function syncPolicyToggles(consentStr) {
+  if (!consentStr) return;
+  try {
+    const consent = JSON.parse(consentStr);
+    const toggleAnalytics = document.getElementById('toggle-analytics');
+    const togglePreference = document.getElementById('toggle-preference');
+    const toggleMarketing = document.getElementById('toggle-marketing');
+
+    if (toggleAnalytics) {
+      toggleAnalytics.classList.toggle('active', !!consent.analytics);
+    }
+    if (togglePreference) {
+      togglePreference.classList.toggle('active', !!consent.preference);
+    }
+    if (toggleMarketing) {
+      toggleMarketing.classList.toggle('active', !!consent.marketing);
+    }
+  } catch (e) {
+    console.error('Error parsing cookie consent:', e);
+  }
 }
